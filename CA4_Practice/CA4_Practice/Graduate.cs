@@ -13,7 +13,7 @@ namespace CA4_Practice
         private int _graduateNumber;
 
         // static variable that belongs to Class
-        public int lastGraduateNumber;
+        public  static int lastGraduateNumber;
 
         //Name property to get and set the name attribute of the object
         public string Name
@@ -83,5 +83,40 @@ namespace CA4_Practice
             lastGraduateNumber++;  // increment the static variable by 1
             GraduateNumber = lastGraduateNumber;  // assign to the graduate number
         }
+
+        //Method to designate the degree class depending on the average grade
+        public virtual string GetDegreeClassification(int g)
+        {
+            string degreeClass = "";
+
+            if (g >= 70)
+            {
+                degreeClass = "Distinction";
+            }
+            else if ( g < 70 && g >= 60)
+            {
+                degreeClass = "Merit";
+            }
+            else if (g < 60 && g >= 40)
+            {
+                degreeClass = "Pass";
+            }
+            else
+            {
+                degreeClass = "Fail";
+            }
+
+            return degreeClass;
+        }
+
+        //Method to print the attributes of the object
+        public override string ToString()
+        {
+            
+
+            return GraduateNumber +","+ Name + "," + AverageGrade + "," + GetDegreeClassification(AverageGrade) + "," + ProjectType;
+        }
+
+        
     }
 }
