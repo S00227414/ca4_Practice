@@ -55,7 +55,7 @@ namespace CA4_Practice
                         fields = lineIn.Split(','); //split input on the comma
                         IsInteger(fields[1], "Grade");
                         Graduates[i] = new Graduate(fields[0], Int32.Parse(fields[1]), fields[2]);
-                        Console.WriteLine(Graduates[i]);
+                        Console.WriteLine(Graduates[i].ToString());
                         lineIn = inputStream.ReadLine(); //get next line
 
 
