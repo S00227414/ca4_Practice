@@ -10,6 +10,7 @@ namespace CA4_Practice
             Graduate[] Graduates = new Graduate[4];
             string template = "{0,-20}{1,-10}{2,-10}{3,-25}{4,-20}";
             Console.WriteLine(template, "Graduate Number", "Name", "Marks", "Classification type", "Project");
+            Console.WriteLine();
 
             Graduates[0] = new Graduate("Anna", 20, "Game");
             Graduates[1] = new Graduate("James", 70, "Mobile App");
@@ -32,7 +33,7 @@ namespace CA4_Practice
             string lineIn;
             Graduate[] Graduates = new Graduate[10];
             string[] fields = new string[3];
-            string template = "{0,-10}{1,-10}{2,-10}";
+            string template = "{0,-20}{1,-10}{2,-10}{3,-25}{4,-20}";
 
             try
             {
@@ -42,7 +43,9 @@ namespace CA4_Practice
                 StreamReader inputStream = new StreamReader(fs);
 
                 Console.WriteLine("Graduate Report");
-                Console.WriteLine(template, "Name", "Grade", "Graduate Number");
+                Console.WriteLine();
+                Console.WriteLine(template, "Graduate Number", "Name", "Marks", "Classification type", "Project");
+                Console.WriteLine();
 
                 lineIn = inputStream.ReadLine(); //get first record
 

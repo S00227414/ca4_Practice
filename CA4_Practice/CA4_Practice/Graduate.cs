@@ -114,7 +114,7 @@ namespace CA4_Practice
         {
             
 
-            return GraduateNumber +","+ Name + "," + AverageGrade + "," + GetDegreeClassification(AverageGrade) + "," + ProjectType;
+            return $"{GraduateNumber, -20}{Name, -10}{AverageGrade, -10}{GetDegreeClassification(AverageGrade), -25}{ProjectType, -20}";
         }
 
         
